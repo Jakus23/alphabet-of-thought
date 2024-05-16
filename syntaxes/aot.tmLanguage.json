@@ -5,7 +5,7 @@
 	"patterns": [
 		{
             "name": "keyword.control.custom",
-            "match": "\\b[A-Z]\\w*\\b"
+            "match": "[A-Z].*"
         },
         {
             "name": "variable.parameter.custom",
