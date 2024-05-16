@@ -1,0 +1,160 @@
+Token
+    Context
+        Concept 
+            is: Context
+            begin: Uppercase Letter
+            end:
+                - (
+                - End Of Line
+            predicate: Is A
+            rule
+                - Parent Child
+                    - May Have Many First Class Entities
+                    - Indent For Child Of Parent
+                    - Child Is A Parent
+                    - More Than One Child
+                    - No More Than Twelve Children
+                    - A Child's Child Is A Parent
+                    - A Child Has One Parent
+                    - Two Different Types If Different Parents
+                    - Inheritance
+                        - Inherit Slots From Full Linage Of Parents
+                        - Overload To Closest Inheritance
+                - Sibling
+                    - All Siblings Have The Same Granualarity
+                    - Siblings May Have The Same Slot If Default Values Are Different
+                    - New Lines 
+        Attribute
+            is: Context
+            predicate: Has A
+            begin: Lowercase
+            end:
+                - (
+                - :
+                - =
+                - End Of Line
+            allow special value override: None
+            - Only Lowercase Characters
+            - Same Slot For Different Frames Means The Slot Has A Dependent Frame
+            - Assign Enough Concatenated Frame Properties To Be Unambigous
+            - Order Per Type From Most Intrisic To Most Extrisic
+            - No Transitive Frame Slot Dependence
+        Alias
+            begin: (
+            end: )
+            allow special value override: Ellispis
+            predicate: Another Name For
+            is: Context
+            - For Dependency Or A More General Context Name
+            - Can Be Used For Both A Frame And A Slot
+            - On The Same Line As Frame Or Slot
+                - When Frame Has More Then One Of The Same Slots
+                - May Link To Frame
+        Map
+            begin: ...
+            end: End Of Line
+            is special value override: Yes
+            predicate: Explained By
+    Content
+        Terminal
+            is: Content
+            predicate: Is A Example Of
+            begin:
+                - Dash
+                - End of Line
+            allow special value override:
+                - Elipsis
+                - Boolean
+            - Natural Occuring Frame
+            - Higher Level Is Better
+        Default
+            Value
+                start: :
+                end: End of line
+            Script
+                start
+                    - "
+                    - `
+                end
+                    - "
+                    - `
+            is: Content
+            predicate: Value Of
+            allow special value override
+                - Boolean
+                - Ellipses
+            - Start With Semicolon
+            - Then A Space
+            - Atomic Unicode Data
+            - Fits On One Line
+            allow folding: Yes
+            allow special value override: No
+            predicate: Detailed By
+            - May Be Use Twice
+                - Default of A Slot
+                - Part Of A Frame TO Specify Applicable Content
+        Table
+            Value
+                start: |
+                end
+                    - end of line
+        Truth Value
+            is: Content
+            keywords
+                - Yes
+                - No
+                - None
+            is special value override: Yes
+Rule
+    Context Explanation
+        subject
+        predicate
+            Is A
+            Has A
+            Element
+        object
+    Global Settings
+        background colour (colour): White
+        file extension: aoi
+    Syntax Readibility Matters
+        - Accronoms
+            - Full Words Allowed
+            - Letters Of Acronm Got Spaces Between
+        - Short Terms
+        - Fix Misspellings
+        - No Synonym For Different Slots
+        - Singluars Only
+    Generality
+        - Eliminate Unnecessary Specificity And Duplicates
+        - Independent And Single Fact Slots
+        - Highest Generality Of Frames
+        - State All Dependencies
+    
+Function
+    Create New Laugange
+        Install Dependencies
+            ...
+        Create Yo Code Extenstion
+            Go To Terminal
+            Change Path To Where You Want To Save The File
+            Type "yo code" Into Terminal
+            Follow Prompts
+                what type of extension do you want to create: New Language Support
+                url or file to import, or none for new: ENTER
+                extension name: alphabet of thought
+                extension identifier: aot
+                extension description: alphabet of thought
+                language id: aot
+                langaguge name: alphabet of thought
+                file extension: .aot
+                scope name: source.aot
+                initialise git repository: Yes 
+        Create "TextMate" Grammar
+            ...
+    Uninstall Previous "alphabet of thought" Extension
+    Install Extension
+        Create "vsix" File
+            command: C:\Users\27837\OneDrive\alphabet-of-thought-main\aot> vsce package
+        Go To Extensions
+        Click The Ellipsis
+        Click "Install from VSIX..." Menu Item

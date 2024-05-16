@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "alphabet of thought",
+    "fileTypes": ["json"],
+	"patterns": [
+		{
+            "name": "keyword.control.custom",
+            "match": "\\b[A-Z]\\w*\\b"
+        },
+        {
+            "name": "variable.parameter.custom",
+            "match": "\\b[a-z]\\w*\\b"
+        },
+        {
+            "name": "string.unquoted.custom",
+            "match": ":.*$"
+        },
+        {
+            "name": "string.unquoted.custom",
+            "match": "-.*$"
+        },
+        {
+            "name": "string.note.custom",
+            "match": "!.*$"
+        },
+        {
+            "name": "string.note.customa",
+            "match": "\"([^\"]*)\""
+        }
+	],
+	"scopeName": "source.aot"
+}
