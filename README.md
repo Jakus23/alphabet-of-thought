@@ -69,58 +69,67 @@ There are 7 idea types and 5 relationship types
 ## alpha in action
 
 ```
-Social Graph
-    - Vertical
-    - Human
-    - Content
-    - Inert
-    name: Facebook
-        - Twitter
-        - Instagram
-        - Facebook
-        - ...
-    started: 2007-10-10
-    active users: 2.9 billion
-    base: Web
-        - Web
-        - Metaverse
-        - Physical
-    is user content allowed: Yes
-Node
-    Organization
-        Business
-        Non Government Organisation
-        Government Organisation
-        ...
+Data Types
+    Numeric
+        Imaginary
+        Irrational
+        Float
+            Big float
+            Small float
+            description: Decimal point values
+        Fraction
+            Decimal
+            Fraction
+        Integer
+            Small integer
+            Large integer
+            Postive small integers
+            description: Whole numbers
+    Date
+    Boolen
+        - True
+        - False
+    None
+    Set
+    Dictionary
+        - {"key":"value"}
+    Sequence
+        String
+        List
+        Tuple
+Object
+    Country
+        - Germany
+        - United States of America
     Person
-        full name: Gottfried Wilhelm von Leibniz
-        home language: Latin
+        full name (text): Gottfried Wilhelm von Leibniz
+        home language (text): Latin
             - German
             - French
             - ...
-        nationality: Germany
-        birthdate: 1646-07-01
-        gender: Male
+        nationality (country): Germany
+        birthdate (date): 1646-07-01
+        gender (text): Male
           - Male
           - Female
-        first name: Gottfried
-        surname: Leibniz
-        title: Dr
+        first name (text): Gottfried
+        surname (text): Leibniz
+        title (text): Dr
           - Mnr
           - Miss
           - Mrs
           - Ms
           - Dr
           - Prof
-        initials: GW
-        date of death: 	1716-11-14 
-        marital status: Single
+        initials (text): GW
+        date of death (date): 	1716-11-14 
+        marital status (text): Single
           - Married
           - Divorced
           - Single
           - Widow
           - Widower
-        occupation status: Employed
+        occupation status (text): Employed
           - Employed
             - Contributor
             - Manager
@@ -130,10 +139,10 @@ Node
           - Self Employed
           - Unemployed
           - Retired
-        residential status: Home Owner
+        residential status (text): Home Owner
           - Renting
           - Home Owner
-        education standard classification: Post Doc
+        education standard classification (text): Post Doc
           - Childhood
           - Primary
           - Lower Secondary
@@ -144,60 +153,6 @@ Node
           - Masters
           - Doctors
           - Post Doc
-        child count: 0
-    social graph
-Edge
-    requester (stakeholder)
-    responder (stakeholder)
-    shared interest
-        - Friends
-        - Influencer
-        - Family Tie
-        - Professional Connection
-        - Spam
-User
-    node
-    is active: Yes
-Address
-    Physcial Address
-        - Last Leibniz Address
-          street number (physical address line): Holzmarkt 4-6
-          suburb (physical address line): Mitte
-          city: Hanover
-          country: Germany
-          code: 301591
-        ... Leibniz had other addresses too
-    Email
-        full address: leibniztheman@gmail.com
-        user name: leibniztheman
-        email service provider: gmail
-        top level domain: com
-        is primary: Yes
-    Telephone
-        number: +77 777 7777
-        type: Cellphone
-            - Landline
-            - Cellphone
-    Social Media
-    ...
-    is active: No
-    termination date: None
-Contact
-  address
-  node
-Allowed Device
-    social graph: Facebook
-    device: Smartphone
-        - Computer
-        - Smartphone
-        - ...
-    operating System: Android
-        - iOS
-    application
-        - Web Browser
-            - Safari
-            - ...
-        - App
-        - ...
+        child count (integer): 0
 
 ```
