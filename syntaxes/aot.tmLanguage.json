@@ -7,6 +7,7 @@
             "name": "keyword.control.custom",
             "match": "[A-Z].*"
         },
+        
         {
             "name": "variable.parameter.custom",
             "match": "\\b[a-z]\\w*\\b"
@@ -21,12 +22,17 @@
         },
         {
             "name": "string.note.custom",
-            "match": "!.*$"
+            "match": "`.*$"
         },
         {
             "name": "string.note.customa",
             "match": "\"([^\"]*)\""
+        },
+        {
+            "name": "keyword.control.custom",
+            "match": "~.*"
         }
+        
 	],
 	"scopeName": "source.aot"
 }
