@@ -6,7 +6,7 @@
 - recursive
 - no patterns or symbols
 - world class practices inspired by python, ymal, JSON, Clojure, SQL, org and Markup
-- ideal for working productively with computers
+- ideal for working productively
 
 There are 7 idea types and 7 relationship types
 
@@ -83,9 +83,9 @@ There are 7 idea types and 7 relationship types
         Float
 
     number: 5
-        ... number attribute-is-a-concept number
+        ... “number attribute-is-a-concept number”
     age (integer):5
-        ... age attribute is a concept integer
+        ... “age attribute is a concept integer”
 
 ```
 
