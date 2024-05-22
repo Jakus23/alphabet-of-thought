@@ -33,7 +33,6 @@ There are 7 idea types and 7 relationship types
     Organization
         Business
             ... “an organization is-a business”
-
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
@@ -77,8 +76,6 @@ There are 7 idea types and 7 relationship types
           ... “number has-example map-unspecified more number”
       ... more number types like integer
           ... “number map-unspecified more number types like integer
-
-
 ```
 7. attribute-is-a-concept
 
@@ -91,7 +88,6 @@ There are 7 idea types and 7 relationship types
         ... “number attribute-is-a-concept number”
     age (integer):5
         ... “age attribute is a concept integer”
-
 ```
 
 ## alpha in action
