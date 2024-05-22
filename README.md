@@ -61,21 +61,18 @@ There are 7 idea types and 7 relationship types
 ```
     Person
         - Mark Zuckerberg
-          ... “a person has-example Mark Zuckerberg”
+          ... “person has-example Mark Zuckerberg”
         full name
             - Mark Zuckerberg
                 ... “full name has-example Mark Zuckerberg”
 ```
-6. map-unspecified (ellipsis)
+6. value-is-a-terminal
 
 ```
-    Number
-      - 1
-      - 2.6
-      - ... more numbers
-          ... “number has-example map-unspecified more number”
-      ... more number types like integer
-          ... “number map-unspecified more number types like integer
+    Person
+        - Gottfried Wilhelm von Leibniz
+        full name: Gottfried Wilhelm von Leibniz
+            ... Gottfried Wilhelm von Leibniz value-is-a-terminal
 ```
 7. attribute-is-a-concept
 
@@ -83,11 +80,10 @@ There are 7 idea types and 7 relationship types
     Number
         Integer
         Float
-
     number: 5
         ... “number attribute-is-a-concept number”
     age (integer):5
-        ... “age attribute is a concept integer”
+        ... “age attribute-is-a-concept integer”
 ```
 
 ## alpha in action
@@ -115,6 +111,8 @@ Country
     - Germany
     - United States of America
 Person
+    - Mark Zuckerberg
+    - Gottfried Wilhelm von Leibniz
     full name (text): Gottfried Wilhelm von Leibniz
     home language (text): Latin
         - German
