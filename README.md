@@ -5,10 +5,10 @@
 - trivial text notation instead of boxes and arrows
 - recursive
 - no patterns or symbols
-- world class practices inspired by Python, ymal, JSON, Clojure, SQL, org and Markup
+- world class practices inspired by python, ymal, JSON, Clojure, SQL, org and Markup
 - ideal for working productively with computers
 
-There are 7 idea types and 5 relationship types
+There are 7 idea types and 6 relationship types
 
 ## ideas (the “tokens”)
 
@@ -32,6 +32,7 @@ There are 7 idea types and 5 relationship types
 ```
     Organization
         Business
+          ... “a business is-a organization”
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
@@ -39,32 +40,39 @@ There are 7 idea types and 5 relationship types
 ```
     Person
         first name
+          ... “a person has-a first name”
 ```
 3. has-example (from a concept or terminal to another terminal)
 
 ```
     Person
         - Mark Zuckerberg
+          ... “a person has-example Mark Zuckerberg”
 ```
 
 4. value-is (semicolon and space after attribute or values in a markdown table)
 
 ```
     first name: John
+      ... “first name value-is John”
 ```
 
-5. has-another-name (parenthesis after concept or attribute)
+5. has-another-name (parenthesis after a concept or attribute)
 
 ```
     Person (Natural Person)
-    full name (name)
+      ... “person has-another-name natural person”
+    integer (int)
+      ... “full name has-another-name int”
 ```
 6. map-unspecified (ellipsis)
 
 ```
     Number
-      - ...example
-      ...there many be more
+      - 1
+      - 2.6
+      - ... more numbers
+      ... more number types like integer
 
 ```
 
