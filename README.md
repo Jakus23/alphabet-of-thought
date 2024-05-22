@@ -1,6 +1,6 @@
 # alpha (.aot)
 
-> Connect ideas. Readable by you, your organization and computer.
+> Connect ideas. Readable by you, your organization and computers.
 
 - trivial text notation instead of boxes and arrows
 - recursive
@@ -21,8 +21,8 @@ There are 7 idea types and 5 relationship types
 
 *content*
 
-5. default (the value after a semicolon and space for attributes or indentation on the next line a dash for the most likely value for an attribute) like `2.1 billion`
-6. terminal (the value after a dash for an example of a concept) like `- Facebook`
+5. default (the value after a semicolon and space for attributes or indentation on the next line a dash for the most likely value for an attribute) like `: 2.1 billion`
+6. terminal (the value after a dash for an example of a concept) like `- Germany`
 7. code like `"for i in range(7): print(i)"`
 
 ## relationships (the implied “token predicates”)
@@ -58,6 +58,14 @@ There are 7 idea types and 5 relationship types
 ```
     Person (Natural Person)
     full name (name)
+```
+6. map-unspecified (ellipsis)
+
+```
+    Number
+      - ...example
+      ...there many be more
+
 ```
 
 ## alpha in action
