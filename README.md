@@ -4,7 +4,7 @@
 
 - trivial text notation instead of boxes and arrows
 - recursive
-- no patterns or symbols
+- no weird symbols to learn
 - world class practices inspired by python, ymal, JSON, Clojure, SQL, org and Markup
 - ideal for working productively
 
