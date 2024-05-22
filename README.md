@@ -23,7 +23,7 @@ There are 7 idea types and 7 relationship types
 
 5. default (the value after a semicolon and space for attributes or indentation on the next line a dash for the most likely value for an attribute) like `: 2.1 billion`
 6. terminal (the value after a dash for an example of a concept) like `- John`
-7. code like ```for person in persons: print(person)```
+7. code like `for person in persons: print(person)`
 
 ## relationships (the implied “token predicates”)
 
@@ -101,30 +101,21 @@ Data Types
         Irrational
         Float
             real numbers: with decimal points
-            Big float
-            Small float
-            description: Decimal point values
         Fraction
-            Decimal
-            Fraction
         Integer
             is whole: yes
-            Small integer
-            Large integer
-            Postive small integers
-            description: Whole numbers
         precision
         memory usage
         availability operations
         is arthimetic supported: yes
     Date
     Boolen
-        is binary: yes
         - True
         - False
+        is binary: yes
     None
     Set
-    Dictionary
+    Map
         - {"key":"value"}
     Sequence
         String
