@@ -16,14 +16,14 @@ There are 7 idea types and 7 relationship types
 
 1. concept (first word is capitalised) like `Person`
 2. attribute (a series of lowercase words) like `full name`
-3. alias (between parenthesis after a concept or attribute) like `(integer)`
+3. alias (between parenthesis after a concept or attribute) like `(string)`
 4. map (ellipsis followed by an optional incompleteness explanation) like `... irrelevant data not included`
 
 *content*
 
 5. default (the value after a semicolon and space for attributes or indentation on the next line a dash for the most likely value for an attribute) like `: 2.1 billion`
-6. terminal (the value after a dash for an example of a concept) like `- Germany`
-7. code like `"for i in range(7): print(i)"`
+6. terminal (the value after a dash for an example of a concept) like `- John`
+7. code like ```for person in persons: print(person)```
 
 ## relationships (the implied “token predicates”)
 
