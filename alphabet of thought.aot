@@ -133,7 +133,6 @@ Rule
 Function
     Create New Laugange
         Install Dependencies
-            ...
         Create Yo Code Extenstion
             Go To Terminal
             Change Path To Where You Want To Save The File
@@ -150,7 +149,8 @@ Function
                 scope name: source.aot
                 initialise git repository: Yes 
         Create "TextMate" Grammar
-            ...
+            Update "oat.tmLanguage.json" file
+            Update "language-configuration.json" file
     Uninstall Previous "alphabet of thought" Extension
     Install Extension
         Create "vsix" File

@@ -25,13 +25,22 @@
             "match": "`.*$"
         },
         {
-            "name": "string.note.customa",
+            "name": "string.note.custom",
             "match": "\"([^\"]*)\""
         },
         {
             "name": "keyword.control.custom",
             "match": "~.*"
+        },
+        {
+            "name": "keyword.control.custom",
+            "match": "\\|.*$"
+        },
+        {
+            "name": "string.note.custom",
+            "match": "\\.{3}.*$"
         }
+
         
 	],
 	"scopeName": "source.aot"
