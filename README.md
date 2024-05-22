@@ -3,27 +3,27 @@
 > Connect ideas. Readable by you, your organization and computer.
 
 - trivial text notation instead of boxes and arrows
-- no complexity cargo-cult
+- recursive
+- no patterns or symbols
 - world class practices inspired by Python, ymal, JSON, Clojure, SQL, org and Markup
-- thought relevance algorithmically calculated from git repo
 - ideal for working productively with computers
 
 There are 7 idea types and 5 relationship types
 
-### ideas (the “tokens”)
+## ideas (the “tokens”)
 
 *context*
 
-1. concept (first word is capitalised) like `Social Graph`
-2. attribute (a series of lowercase words) like `active users`
-3. alias (between parenthesis after a concept or attribute) like `(Network)`
+1. concept (first word is capitalised) like `Person`
+2. attribute (a series of lowercase words) like `full name`
+3. alias (between parenthesis after a concept or attribute) like `(integer)`
 4. map (ellipsis followed by an optional incompleteness explanation) like `... irrelevant data not included`
 
 *content*
 
 5. default (the value after a semicolon and space for attributes or indentation on the next line a dash for the most likely value for an attribute) like `2.1 billion`
 6. terminal (the value after a dash for an example of a concept) like `- Facebook`
-7. truth value like `Yes`,`No` or `None` 
+7. code like `"for i in range(7): print(i)"`
 
 ## relationships (the implied “token predicates”)
 
@@ -32,7 +32,6 @@ There are 7 idea types and 5 relationship types
 ```
     Organization
         Business
-            ... Organization is-a Business
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
@@ -40,37 +39,32 @@ There are 7 idea types and 5 relationship types
 ```
     Person
         first name
-            ... Person has-a first name
 ```
 3. has-example (from a concept or terminal to another terminal)
 
 ```
     Person
         - Mark Zuckerberg
-            ... Person has-example Mark Zuckerberg
 ```
 
 4. value-is (semicolon and space after attribute or values in a markdown table)
 
 ```
     first name: John
-        ... first name value-is John 
 ```
 
 5. has-another-name (parenthesis after concept or attribute)
 
 ```
     Person (Natural Person)
-      ... Person has-another-name Natural Person
     full name (name)
-      ... full name has-another-name name
 ```
 
 ## alpha in action
 
 ```
 Data Types
-    Numeric
+    Number
         Imaginary
         Irrational
         Float
