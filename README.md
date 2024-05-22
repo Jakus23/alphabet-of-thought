@@ -45,8 +45,12 @@ There are 7 idea types and 7 relationship types
 3. value-is (semicolon and space after attribute or values in a markdown table)
 
 ```
-    first name: John
-      ... “first name value-is John”
+    first name: Gottfried
+      ... “first name value-is Gottfried
+    surname
+        - von Leibniz
+        - Zuckerberg
+            ... “surname value-is von Leibniz or Zuckerberg”
 ```
 4. has-another-name (parenthesis after a concept or attribute)
 
@@ -56,15 +60,12 @@ There are 7 idea types and 7 relationship types
     integer (int)
       ... “full name has-another-name int”
 ```
-5. has-example (from a concept, termanal or attribute, and  another terminal)
+5. has-example (from a concept or terminal, and  another terminal)
 
 ```
     Person
         - Mark Zuckerberg
           ... “person has-example Mark Zuckerberg”
-        full name
-            - Mark Zuckerberg
-                ... “full name has-example Mark Zuckerberg”
 ```
 6. value-is-a-terminal
 
