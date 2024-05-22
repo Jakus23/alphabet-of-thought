@@ -27,12 +27,13 @@ There are 7 idea types and 7 relationship types
 
 ## relationships (the implied “token predicates”)
 
-1. is-a (indentation on the next line between one concept, another or a terminal, or between an attribute and a terminal)
+1. is-a (indentation on the next line between one concept and another concept)
 
 ```
     Organization
         Business
-          ... “an organization is-a business”
+            ... “an organization is-a business”
+
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
@@ -42,28 +43,29 @@ There are 7 idea types and 7 relationship types
         first name
           ... “a person has-a first name”
 ```
-3. has-example (from a concept or terminal to another terminal)
-
-```
-    Person
-        - Mark Zuckerberg
-          ... “a person has-example Mark Zuckerberg”
-```
-
-4. value-is (semicolon and space after attribute or values in a markdown table)
+3. value-is (semicolon and space after attribute or values in a markdown table)
 
 ```
     first name: John
       ... “first name value-is John”
 ```
-
-5. has-another-name (parenthesis after a concept or attribute)
+4. has-another-name (parenthesis after a concept or attribute)
 
 ```
     Person (Natural Person)
       ... “person has-another-name natural person”
     integer (int)
       ... “full name has-another-name int”
+```
+5. has-example (from a concept, termanal or attribute, and  another terminal)
+
+```
+    Person
+        - Mark Zuckerberg
+          ... “a person has-example Mark Zuckerberg”
+        full name
+            - Mark Zuckerberg
+                ... “full name has-example Mark Zuckerberg”
 ```
 6. map-unspecified (ellipsis)
 
