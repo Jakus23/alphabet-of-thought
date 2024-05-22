@@ -8,7 +8,7 @@
 - world class practices inspired by python, ymal, JSON, Clojure, SQL, org and Markup
 - ideal for working productively with computers
 
-There are 7 idea types and 6 relationship types
+There are 7 idea types and 7 relationship types
 
 ## ideas (the “tokens”)
 
@@ -75,6 +75,19 @@ There are 7 idea types and 6 relationship types
       ... more number types like integer
 
 ```
+7. attribute-is-a-concept
+
+```
+    Number
+        Integer
+        Float
+
+    number: 5
+        ... number attribute-is-a-concept number
+    age (integer):5
+        ... age attribute is a concept integer
+
+```
 
 ## alpha in action
 
@@ -84,6 +97,7 @@ Data Types
         Imaginary
         Irrational
         Float
+            real numbers: with decimal points
             Big float
             Small float
             description: Decimal point values
@@ -91,12 +105,18 @@ Data Types
             Decimal
             Fraction
         Integer
+            is whole: yes
             Small integer
             Large integer
             Postive small integers
             description: Whole numbers
+        precision
+        memory usage
+        availability operations
+        is arthimetic supported: yes
     Date
     Boolen
+        is binary: yes
         - True
         - False
     None
