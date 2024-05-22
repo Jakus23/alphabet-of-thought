@@ -32,7 +32,7 @@ There are 7 idea types and 6 relationship types
 ```
     Organization
         Business
-          ... “a business is-a organization”
+          ... “an organization is-a business”
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
