@@ -95,13 +95,9 @@ There are 7 idea types and 7 relationship types
 ```
 Data Types
     Number
-        Imaginary
-        Irrational
-        Float
-            real numbers: with decimal points
-        Fraction
         Integer
             is whole: yes
+        ... more number types availe
         precision
         memory usage
         availability operations
@@ -111,70 +107,65 @@ Data Types
         - True
         - False
         is binary: yes
-    None
-    Set
-    Map
         - {"key":"value"}
     Sequence
         String
-        List
-        Tuple
-Object
-    Country
-        - Germany
-        - United States of America
-    Person
-        full name (text): Gottfried Wilhelm von Leibniz
-        home language (text): Latin
-            - German
-            - French
-            - ...
-        nationality (country): Germany
-        birthdate (date): 1646-07-01
-        gender (text): Male
-          - Male
-          - Female
-        first name (text): Gottfried
-        surname (text): Leibniz
-        title (text): Dr
-          - Mnr
-          - Miss
-          - Mrs
-          - Ms
-          - Dr
-          - Prof
-        initials (text): GW
-        date of death (date): 	1716-11-14 
-        marital status (text): Single
-          - Married
-          - Divorced
-          - Single
-          - Widow
-          - Widower
-        occupation status (text): Employed
-          - Employed
-            - Contributor
-            - Manager
-            - Executive
-            - Non Executive
-            - Independent
-          - Self Employed
-          - Unemployed
-          - Retired
-        residential status (text): Home Owner
-          - Renting
-          - Home Owner
-        education standard classification (text): Post Doc
-          - Childhood
-          - Primary
-          - Lower Secondary
-          - Upper Secondary
-          - Postsecondary Non Tertiary
-          - Short Cycle Tertiary
-          - Bachelors
-          - Masters
-          - Doctors
-          - Post Doc
-        child count (integer): 0
+        ... more sequences like lists are possible
+Country
+    - Germany
+    - United States of America
+Person
+    full name (text): Gottfried Wilhelm von Leibniz
+    home language (text): Latin
+        - German
+        - French
+        - ...
+    nationality (country): Germany
+    birthdate (date): 1646-07-01
+    gender (text): Male
+      - Male
+      - Female
+    first name (text): Gottfried
+    surname (text): Leibniz
+    title (text): Dr
+      - Mnr
+      - Miss
+      - Mrs
+      - Ms
+      - Dr
+      - Prof
+    initials (text): GW
+    date of death (date): 	1716-11-14 
+    marital status (text): Single
+      - Married
+      - Divorced
+      - Single
+      - Widow
+      - Widower
+    occupation status (text): Employed
+      - Employed
+        - Contributor
+        - Manager
+        - Executive
+        - Non Executive
+        - Independent
+      - Self Employed
+      - Unemployed
+      - Retired
+    residential status (text): Home Owner
+      - Renting
+      - Home Owner
+    education standard classification (text): Post Doc
+      - Childhood
+      - Primary
+      - Lower Secondary
+      - Upper Secondary
+      - Postsecondary Non Tertiary
+      - Short Cycle Tertiary
+      - Bachelors
+      - Masters
+      - Doctors
+      - Post Doc
+    child count (integer): 0
 
 ```
