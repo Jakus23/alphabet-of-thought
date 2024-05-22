@@ -72,7 +72,10 @@ There are 7 idea types and 7 relationship types
       - 1
       - 2.6
       - ... more numbers
+          ... “number has-example map-unspecified more number”
       ... more number types like integer
+          ... “number map-unspecified more number types like integer
+
 
 ```
 7. attribute-is-a-concept
