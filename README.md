@@ -58,7 +58,7 @@ There are 7 idea types and 7 relationship types
     Person (Natural Person)
       ... “person has-another-name natural person”
       full name (name)
-      ... “full name has-another-name name”
+          ... “full name has-another-name name”
 ```
 5. has-example (from a concept or terminal, and  another terminal)
 
