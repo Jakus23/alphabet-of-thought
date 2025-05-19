@@ -28,11 +28,11 @@
             "match": "\"([^\"]*)\""
         },
         {
-            "name": "keyword.control.custom",
+            "name": "string.unquoted.tilde.custom",
             "match": "~.*"
         },
         {
-            "name": "keyword.control.custom",
+            "name": "string.unquoted.pipe.custom", 
             "match": "\\|.*$"
         },
         {
