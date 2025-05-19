@@ -1,8 +1,10 @@
 {
-  "name": "alpha",
-  "displayName": "alpha",
-  "description": "alphabet of thought",
-  "version": "0.0.1",
+  "name": "alphabet-of-thought",
+  "displayName": "alphabet of thought",
+  "description": "The alphabet of thought programming language distill creativity",
+  "version": "0.0.2",
+  "publisher": "Jakus",
+  "icon": "alpha.png",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -10,20 +12,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "aot",
-      "aliases": ["alphabet of thought", "aot"],
-      "extensions": [".aot"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "aot",
-      "scopeName": "source.aot",
-      "path": "./syntaxes/aot.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "aot",
+        "aliases": [
+          "alphabet of thought",
+          "aot"
+        ],
+        "extensions": [
+          ".aot"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "aot",
+        "scopeName": "source.aot",
+        "path": "./syntaxes/aot.tmLanguage.json"
+      }
+    ]
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Jakus23/alphabet-of-thought.git"
+    "type": "git",
+    "url": "https://github.com/Jakus23/alphabet-of-thought.git"
   }
 }
