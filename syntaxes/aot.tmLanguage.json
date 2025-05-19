@@ -21,7 +21,7 @@
         },
         {
             "name": "string.note.custom",
-            "match": "`.*$"
+            "match": "`[^`]*`"
         },
         {
             "name": "string.note.custom",
