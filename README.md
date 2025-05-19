@@ -1,14 +1,13 @@
 # alpha (.aot)
 
-> Connect ideas. Readable by you, your organization and computers.
+> Connect your ideas to distill your creativity in pure code
 
-- trivial text notation instead of boxes and arrows
-- recursive
-- no weird symbols to learn
-- world class practices inspired by python, ymal, JSON, Clojure, SQL, org and Markup
+- readable by you, your organization and computers
+- text instead of boxes and arrows
+- inspired by python, ymal, JSON, Clojure, SQL, org and Markup
 - ideal for working productively
 
-There are 7 idea types and 7 relationship types
+There are 7 idea types and 7 connections types
 
 ## ideas (the “tokens”)
 
@@ -25,14 +24,14 @@ There are 7 idea types and 7 relationship types
 6. terminal (the value after a dash for an example of a concept) like `- John`
 7. code like `for person in persons: print(person)`
 
-## relationships (the implied “token predicates”)
+## connections (the implied “token predicates”)
 
 1. is-a (indentation on the next line between one concept and another concept)
 
 ```
     Organization
         Business
-            ... “an organization is-a business”
+            ... “an business is-a organization”
 ```
 
 2. has-a (indentation from a concept or terminal to an attribute or indentation from a concept or terminal and the header of a markdown table)
@@ -46,7 +45,7 @@ There are 7 idea types and 7 relationship types
 
 ```
     first name: Gottfried
-      ... “first name value-is Gottfried
+        ... “first name value-is Gottfried
     surname
         - von Leibniz
         - Zuckerberg
@@ -65,15 +64,15 @@ There are 7 idea types and 7 relationship types
 ```
     Person
         - Mark Zuckerberg
-          ... “person has-example Mark Zuckerberg”
+            ... “person has-example Mark Zuckerberg”
 ```
-6. value-is-a-terminal
+6. value-for
 
 ```
     Person
         - Gottfried Wilhelm von Leibniz
         full name: Gottfried Wilhelm von Leibniz
-            ... Gottfried Wilhelm von Leibniz value-is-a-terminal
+            ... Gottfried Wilhelm von Leibniz value-for
 ```
 7. attribute-is-a-concept
 
@@ -83,11 +82,12 @@ There are 7 idea types and 7 relationship types
         Float
     number: 5
         ... “number attribute-is-a-concept number”
-    age (integer):5
+    age (integer): 5
         ... “age attribute-is-a-concept integer”
 ```
 
 ## alpha in action
+### Data Types
 
 ```
 Data Types
@@ -108,6 +108,9 @@ Data Types
     Sequence
         String
         ... more sequences like lists are possible
+```
+
+## People
 Country
     - Germany
     - United States of America
@@ -166,5 +169,28 @@ Person
       - Doctors
       - Post Doc
     child count (integer): 0
+Participation
+    - User
+    - Contributor
+    - Manager
+    - Executive
+    - Non Executive
+    - Independent
+    start date: 1666-01-01
+    end date: 1716-11-14
+    status: Active
+      - Active 
+      - Inactive
+      - Suspended
+    role: Mathematician
+    level: Senior
+      - Junior
+      - Intermediate 
+      - Senior
+      - Expert
+    department: Mathematics
+    location: Germany
+    team size: 5
+    projects: 3
 
 ```
