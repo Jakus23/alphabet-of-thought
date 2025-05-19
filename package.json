@@ -2,7 +2,7 @@
   "name": "alphabet-of-thought",
   "displayName": "alphabet of thought",
   "description": "The alphabet of thought programming language connects your ideas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "Jakus",
   "icon": "alpha.png",
   "engines": {
