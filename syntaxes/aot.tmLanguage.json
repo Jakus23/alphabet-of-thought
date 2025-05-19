@@ -5,19 +5,18 @@
 	"patterns": [
 		{
             "name": "keyword.control.custom",
-            "match": "[A-Z].*"
+            "match": "[A-Z][^(:\"'`]*(?=[(:\"'`]|$)"
         },
-        
         {
             "name": "variable.parameter.custom",
             "match": "\\b[a-z]\\w*\\b"
         },
         {
-            "name": "string.unquoted.custom",
+            "name": "string.unquoted.default.custom",
             "match": ":.*$"
         },
         {
-            "name": "string.unquoted.custom",
+            "name": "string.unquoted.terminal.custom", 
             "match": "-.*$"
         },
         {
@@ -40,8 +39,6 @@
             "name": "string.note.custom",
             "match": "\\.{3}.*$"
         }
-
-        
 	],
 	"scopeName": "source.aot"
 }
