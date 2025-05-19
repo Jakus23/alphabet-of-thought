@@ -7,7 +7,7 @@
 - inspired by python, ymal, JSON, Clojure, SQL, org and Markup
 - ideal for working productively
 
-There are 7 idea types and 7 connections types
+There are 7 idea types and 7 connection types
 
 ## ideas (the “tokens”)
 
@@ -87,8 +87,6 @@ There are 7 idea types and 7 connections types
 ```
 
 ## alpha in action
-### Data Types
-
 ```
 Data Types
     Number
@@ -108,89 +106,4 @@ Data Types
     Sequence
         String
         ... more sequences like lists are possible
-```
-
-## People
-Country
-    - Germany
-    - United States of America
-Person
-    - Mark Zuckerberg
-    - Gottfried Wilhelm von Leibniz
-    full name (text): Gottfried Wilhelm von Leibniz
-    home language (text): Latin
-        - German
-        - French
-        - ...
-    nationality (country): Germany
-    birthdate (date): 1646-07-01
-    gender (text): Male
-      - Male
-      - Female
-    first name (text): Gottfried
-    surname (text): Leibniz
-    title (text): Dr
-      - Mnr
-      - Miss
-      - Mrs
-      - Ms
-      - Dr
-      - Prof
-    initials (text): GW
-    date of death (date): 	1716-11-14 
-    marital status (text): Single
-      - Married
-      - Divorced
-      - Single
-      - Widow
-      - Widower
-    occupation status (text): Employed
-      - Employed
-        - Contributor
-        - Manager
-        - Executive
-        - Non Executive
-        - Independent
-      - Self Employed
-      - Unemployed
-      - Retired
-    residential status (text): Home Owner
-      - Renting
-      - Home Owner
-    education standard classification (text): Post Doc
-      - Childhood
-      - Primary
-      - Lower Secondary
-      - Upper Secondary
-      - Postsecondary Non Tertiary
-      - Short Cycle Tertiary
-      - Bachelors
-      - Masters
-      - Doctors
-      - Post Doc
-    child count (integer): 0
-Participation
-    - User
-    - Contributor
-    - Manager
-    - Executive
-    - Non Executive
-    - Independent
-    start date: 1666-01-01
-    end date: 1716-11-14
-    status: Active
-      - Active 
-      - Inactive
-      - Suspended
-    role: Mathematician
-    level: Senior
-      - Junior
-      - Intermediate 
-      - Senior
-      - Expert
-    department: Mathematics
-    location: Germany
-    team size: 5
-    projects: 3
-
 ```
