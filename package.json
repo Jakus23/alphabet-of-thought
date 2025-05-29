@@ -1,7 +1,15 @@
 {
   "name": "alphabet-of-thought",
   "displayName": "alphabet of thought",
-  "description": "The alphabet of thought programming language connects your ideas",
+  "description": "distill your creativity into code",
+  "keywords": [
+    "aot",
+    "alphabet of thought",
+    "programming language",
+    "syntax highlighting",
+    "code editor"
+  ],
+  "license": "MIT",
   "version": "0.0.3",
   "publisher": "Jakus",
   "icon": "alpha.png",

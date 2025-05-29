@@ -1,13 +1,17 @@
 # alpha (.aot)
 
-> Connect your ideas to distill your creativity in pure code
+> connect your ideas in code
 
-- readable by you, your organization and computers
-- text instead of boxes and arrows
-- inspired by python, ymal, JSON, Clojure, SQL, org and Markup
+- For you, your organization your computers
+- take structured notes that are easy to read, write, and maintain
+- minimal syntax and cognitive load
 - ideal for working productively
 
-There are 7 idea types and 7 connection types
+Alpha (.aot) is a lightweight, human-friendly markup for representing structured knowledge and relationships directly in text.
+
+Your brain can focus on synthesis, abstraction and other emerging types of reasoning — making it ideal for those who want to capturing complex ideas, load working-memory with only important ideas quickly, automating work with AI, and make your ideas distinct and unambiguous.
+
+A set of idea types and connection types provide a clear structure for representing knowledge, making it easier to express relationships, attributes, and examples in a consistent and understandable way.
 
 ## ideas (the “tokens”)
 
@@ -92,13 +96,13 @@ Data Types
     Number
         Integer
             is whole: yes
-        ... more number types availe
+        ... more number types available
         precision
         memory usage
         availability operations
-        is arthimetic supported: yes
+        is arithmetic supported: yes
     Date
-    Boolen
+    Boolean
         - True
         - False
         is binary: yes
@@ -107,3 +111,4 @@ Data Types
         String
         ... more sequences like lists are possible
 ```
+
