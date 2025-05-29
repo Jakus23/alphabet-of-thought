@@ -9,11 +9,11 @@
 
 Alpha (.aot) is a lightweight, human-friendly markup for representing structured knowledge and relationships directly in text.
 
-Your brain can focus on synthesis, abstraction and other emerging types of reasoning — making it ideal for those who want to capturing complex ideas, load working-memory with only important ideas quickly, automating work with AI, and make your ideas distinct and unambiguous.
+Your brain can focus on synthesis, abstraction and other emerging types of reasoning — making it ideal for knowledge workers who want to capture complex ideas, load working-memory with only important thoughts quickly, automating work with AI, and make your ideas distinct and unambiguous.
 
-A set of idea types and connection types provide a clear structure for representing knowledge, making it easier to express relationships, attributes, and examples in a consistent and understandable way.
+The "ideas" and "connections" thought types create clear structure for representing knowledge, make it easier to express relationships, attributes, and examples in a consistent and understandable way.
 
-## ideas (the “tokens”)
+## ideas
 
 *context*
 
@@ -28,7 +28,7 @@ A set of idea types and connection types provide a clear structure for represent
 6. terminal (the value after a dash for an example of a concept) like `- John`
 7. code like `for person in persons: print(person)`
 
-## connections (the implied “token predicates”)
+## connections
 
 1. is-a (indentation on the next line between one concept and another concept)
 
