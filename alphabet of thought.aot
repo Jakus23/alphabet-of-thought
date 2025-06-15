@@ -212,8 +212,8 @@ Function
         Create `TextMate` Grammar
             Update "oat.tmLanguage.json" file
             Update "language-configuration.json" file
-    
-    Iterate OverExtension
+     
+    Iterate Over Extension
         Make Change
         Disable And Uninstall Previous "alphabet of thought" Extension
         Create `vsix` File
