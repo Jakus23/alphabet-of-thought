@@ -115,20 +115,81 @@ Rule
         object
     Global Settings
         background colour (colour): White
-        file extension: aoi
+        file extension: aot
     Syntax Readibility Matters
         - Accronoms
             - Full Words Allowed
-            - Letters Of Acronm Got Spaces Between
+            - Letters Of Acronm Got Spaces Between Unless They Are Obvious
         - Short Terms
         - Fix Misspellings
         - No Synonym For Different Slots
         - Singluars Only
     Generality
-        - Eliminate Unnecessary Specificity And Duplicates
+        - Eliminate Duplicates
         - Independent And Single Fact Slots
         - Highest Generality Of Frames
         - State All Dependencies
+    Dimensionality
+        - Frames Should Be Subordinates Of Single Dimension
+            - Scenarios
+                - Targets
+                    - Metrics
+                    - Goals
+                - Stakeholders
+                - Principles
+            - Functional
+                - Verb And Qualified Noun
+                - Result Implied
+                - Be As Specific As Possible
+                - All Subordinates Should Be A Result Of the Superordinate (Ask Why?)
+                - All Subordinates Together Fully Replace the Superordinate
+            - Things
+                - Data Structures
+                    level allowed
+                        - Single
+                        - Multiple
+                    - Tree
+                        Grand Parent
+                        Parent
+                            grand parent
+                        Child
+                            parent
+                        
+                            ...no need to include parent because child has parent as an attribute
+                        Parent
+                            Child
+                                Grand Child
+                    - Graph
+                        Vertex
+                        Edge
+                            vertex from
+                            vertex to
+                    - Associative Table
+                        Entity One
+                        Entity Two
+                        Junction
+                            entity one
+                            entity two
+                    - Composite
+                        Master
+                        Child One
+                            master
+                        Child Two
+                            master
+                        Child One Link To Child Two
+                            child one
+                            child two
+                             
+            - Data
+                Normal Forms
+                
+            - Temporal
+            - Responsibility / Organisational
+            - Operational
+        - The Sum Of All Child Frames Is The Parent
+        - Frames Can Have Conceptual, Logical and Physical Children
+            - Only Define Where There Is A Return On Investmnet
+
     
 Function
     Create New Laugange
