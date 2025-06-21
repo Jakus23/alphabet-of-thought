@@ -1,0 +1,238 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> code
+Rule 1     code -> attribute
+Rule 2     code -> context
+Rule 3     code -> attribute code
+Rule 4     code -> context code
+Rule 5     attribute -> ATTRIBUTE
+Rule 6     context -> ASSIGN
+Rule 7     context -> COMMENT
+Rule 8     context -> NEWLINE
+Rule 9     context -> ELLIPSIS
+Rule 10    context -> TAB
+Rule 11    context -> EXAMPLE
+
+Terminals, with rules where they appear
+
+ASSIGN               : 6
+ATTRIBUTE            : 5
+COMMENT              : 7
+ELLIPSIS             : 9
+EXAMPLE              : 11
+NEWLINE              : 8
+TAB                  : 10
+error                : 
+
+Nonterminals, with rules where they appear
+
+attribute            : 1 3
+code                 : 3 4 0
+context              : 2 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . code
+    (1) code -> . attribute
+    (2) code -> . context
+    (3) code -> . attribute code
+    (4) code -> . context code
+    (5) attribute -> . ATTRIBUTE
+    (6) context -> . ASSIGN
+    (7) context -> . COMMENT
+    (8) context -> . NEWLINE
+    (9) context -> . ELLIPSIS
+    (10) context -> . TAB
+    (11) context -> . EXAMPLE
+
+    ATTRIBUTE       shift and go to state 4
+    ASSIGN          shift and go to state 5
+    COMMENT         shift and go to state 6
+    NEWLINE         shift and go to state 7
+    ELLIPSIS        shift and go to state 8
+    TAB             shift and go to state 9
+    EXAMPLE         shift and go to state 10
+
+    code                           shift and go to state 1
+    attribute                      shift and go to state 2
+    context                        shift and go to state 3
+
+state 1
+
+    (0) S' -> code .
+
+
+
+state 2
+
+    (1) code -> attribute .
+    (3) code -> attribute . code
+    (1) code -> . attribute
+    (2) code -> . context
+    (3) code -> . attribute code
+    (4) code -> . context code
+    (5) attribute -> . ATTRIBUTE
+    (6) context -> . ASSIGN
+    (7) context -> . COMMENT
+    (8) context -> . NEWLINE
+    (9) context -> . ELLIPSIS
+    (10) context -> . TAB
+    (11) context -> . EXAMPLE
+
+    $end            reduce using rule 1 (code -> attribute .)
+    ATTRIBUTE       shift and go to state 4
+    ASSIGN          shift and go to state 5
+    COMMENT         shift and go to state 6
+    NEWLINE         shift and go to state 7
+    ELLIPSIS        shift and go to state 8
+    TAB             shift and go to state 9
+    EXAMPLE         shift and go to state 10
+
+    attribute                      shift and go to state 2
+    code                           shift and go to state 11
+    context                        shift and go to state 3
+
+state 3
+
+    (2) code -> context .
+    (4) code -> context . code
+    (1) code -> . attribute
+    (2) code -> . context
+    (3) code -> . attribute code
+    (4) code -> . context code
+    (5) attribute -> . ATTRIBUTE
+    (6) context -> . ASSIGN
+    (7) context -> . COMMENT
+    (8) context -> . NEWLINE
+    (9) context -> . ELLIPSIS
+    (10) context -> . TAB
+    (11) context -> . EXAMPLE
+
+    $end            reduce using rule 2 (code -> context .)
+    ATTRIBUTE       shift and go to state 4
+    ASSIGN          shift and go to state 5
+    COMMENT         shift and go to state 6
+    NEWLINE         shift and go to state 7
+    ELLIPSIS        shift and go to state 8
+    TAB             shift and go to state 9
+    EXAMPLE         shift and go to state 10
+
+    context                        shift and go to state 3
+    code                           shift and go to state 12
+    attribute                      shift and go to state 2
+
+state 4
+
+    (5) attribute -> ATTRIBUTE .
+
+    ATTRIBUTE       reduce using rule 5 (attribute -> ATTRIBUTE .)
+    ASSIGN          reduce using rule 5 (attribute -> ATTRIBUTE .)
+    COMMENT         reduce using rule 5 (attribute -> ATTRIBUTE .)
+    NEWLINE         reduce using rule 5 (attribute -> ATTRIBUTE .)
+    ELLIPSIS        reduce using rule 5 (attribute -> ATTRIBUTE .)
+    TAB             reduce using rule 5 (attribute -> ATTRIBUTE .)
+    EXAMPLE         reduce using rule 5 (attribute -> ATTRIBUTE .)
+    $end            reduce using rule 5 (attribute -> ATTRIBUTE .)
+
+
+state 5
+
+    (6) context -> ASSIGN .
+
+    ATTRIBUTE       reduce using rule 6 (context -> ASSIGN .)
+    ASSIGN          reduce using rule 6 (context -> ASSIGN .)
+    COMMENT         reduce using rule 6 (context -> ASSIGN .)
+    NEWLINE         reduce using rule 6 (context -> ASSIGN .)
+    ELLIPSIS        reduce using rule 6 (context -> ASSIGN .)
+    TAB             reduce using rule 6 (context -> ASSIGN .)
+    EXAMPLE         reduce using rule 6 (context -> ASSIGN .)
+    $end            reduce using rule 6 (context -> ASSIGN .)
+
+
+state 6
+
+    (7) context -> COMMENT .
+
+    ATTRIBUTE       reduce using rule 7 (context -> COMMENT .)
+    ASSIGN          reduce using rule 7 (context -> COMMENT .)
+    COMMENT         reduce using rule 7 (context -> COMMENT .)
+    NEWLINE         reduce using rule 7 (context -> COMMENT .)
+    ELLIPSIS        reduce using rule 7 (context -> COMMENT .)
+    TAB             reduce using rule 7 (context -> COMMENT .)
+    EXAMPLE         reduce using rule 7 (context -> COMMENT .)
+    $end            reduce using rule 7 (context -> COMMENT .)
+
+
+state 7
+
+    (8) context -> NEWLINE .
+
+    ATTRIBUTE       reduce using rule 8 (context -> NEWLINE .)
+    ASSIGN          reduce using rule 8 (context -> NEWLINE .)
+    COMMENT         reduce using rule 8 (context -> NEWLINE .)
+    NEWLINE         reduce using rule 8 (context -> NEWLINE .)
+    ELLIPSIS        reduce using rule 8 (context -> NEWLINE .)
+    TAB             reduce using rule 8 (context -> NEWLINE .)
+    EXAMPLE         reduce using rule 8 (context -> NEWLINE .)
+    $end            reduce using rule 8 (context -> NEWLINE .)
+
+
+state 8
+
+    (9) context -> ELLIPSIS .
+
+    ATTRIBUTE       reduce using rule 9 (context -> ELLIPSIS .)
+    ASSIGN          reduce using rule 9 (context -> ELLIPSIS .)
+    COMMENT         reduce using rule 9 (context -> ELLIPSIS .)
+    NEWLINE         reduce using rule 9 (context -> ELLIPSIS .)
+    ELLIPSIS        reduce using rule 9 (context -> ELLIPSIS .)
+    TAB             reduce using rule 9 (context -> ELLIPSIS .)
+    EXAMPLE         reduce using rule 9 (context -> ELLIPSIS .)
+    $end            reduce using rule 9 (context -> ELLIPSIS .)
+
+
+state 9
+
+    (10) context -> TAB .
+
+    ATTRIBUTE       reduce using rule 10 (context -> TAB .)
+    ASSIGN          reduce using rule 10 (context -> TAB .)
+    COMMENT         reduce using rule 10 (context -> TAB .)
+    NEWLINE         reduce using rule 10 (context -> TAB .)
+    ELLIPSIS        reduce using rule 10 (context -> TAB .)
+    TAB             reduce using rule 10 (context -> TAB .)
+    EXAMPLE         reduce using rule 10 (context -> TAB .)
+    $end            reduce using rule 10 (context -> TAB .)
+
+
+state 10
+
+    (11) context -> EXAMPLE .
+
+    ATTRIBUTE       reduce using rule 11 (context -> EXAMPLE .)
+    ASSIGN          reduce using rule 11 (context -> EXAMPLE .)
+    COMMENT         reduce using rule 11 (context -> EXAMPLE .)
+    NEWLINE         reduce using rule 11 (context -> EXAMPLE .)
+    ELLIPSIS        reduce using rule 11 (context -> EXAMPLE .)
+    TAB             reduce using rule 11 (context -> EXAMPLE .)
+    EXAMPLE         reduce using rule 11 (context -> EXAMPLE .)
+    $end            reduce using rule 11 (context -> EXAMPLE .)
+
+
+state 11
+
+    (3) code -> attribute code .
+
+    $end            reduce using rule 3 (code -> attribute code .)
+
+
+state 12
+
+    (4) code -> context code .
+
+    $end            reduce using rule 4 (code -> context code .)
+
