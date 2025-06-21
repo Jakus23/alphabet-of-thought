@@ -1,17 +1,22 @@
 # alpha (.aot)
 
-Alpha is a lightweight, readable, text language. Designed for real-world cognitive and collaborative work, for teams who want to formulate, connect, communicate, and automate their knowledge. It’s not about organising information - Alpha helps you abstract meaning from existing knowledge and share understanding with others and yourself over time.
-
 ## What is Alpha?
 
+Alpha is a lightweight, readable, text language. Designed for real-world cognitive and collaborative work, for teams who want to formulate, connect, communicate, and automate their knowledge. It’s not about organising information - Alpha helps you abstract meaning from existing knowledge and share understanding with others and yourself over time.
+
 Alpha is built on a few powerful principles:
-- I think uniquely, but I always extend existing thought structures to think.
-- Structured thoughts are ideas that connect to each other.
-- Knowledge works best when organised as a *tree* - not linear text, visuals, or code.
+- You can think uniquely, but you always extend existing thought structures to think.
+- Clear thoughts are ideas that connect to each other.
+- Knowledge works best when organised as a *tree* of text - not linear text, visuals, or code.
+
+Ideal for knowledge workers, business documentation, and enterprise architecture
+- Formulate and communicate complicated ideas effortlessly
+- Reduce confusion and duplication
+- Automating business knowledge with AI
 
 ### Elements
 
-Alpha has *ideas* and *connections* between ideas to build structured thought. Here's how it works:
+Alpha has *ideas* and *connections* between ideas to build clear thought. Here's how it works:
 
 #### Idea Types (What you're describing)
 
@@ -102,9 +107,9 @@ Prefix (Namespace)
         is necessary for this example: no
 ```
 
-This example shows how Alpha retains all structure and meaning — but in a clearer, more accessible format that is infinitely extendable.
+This example shows how Alpha retains all clarity and meaning — in a accessible format that is infinitely extendable.
 
-## Design Principles
+## Rules
 
 ### Readability
 - Use full words, fix misspellings
@@ -119,25 +124,6 @@ This example shows how Alpha retains all structure and meaning — but in a clea
 ### Granularity
 - Concepts should reflect their parts
 - Only go deeper if it’s worth the effort
-
-## Inspiration
-Alpha is influenced by:
-- Charles Peirce’s How to Make Our Ideas Clear
-- Leibniz’s Alphabet of Human Thought
-- Practical modern software development
-
-Ideal for knowledge workers
-- Formulate and communicate complicated ideas effortlessly
-- Reduce confusion and duplication
-- Use as a problem solving tool or remembering problems already solved 
-- Documenting business knowledge for automating work with AI
-
-
-Perfect for:
-- Knowledge workers & analysts
-- Business documentation
-- Systems thinkers
-
 
 [1] Aspects
 True thoughts are hard won. They emerge from incorporating many aspects while myopic thoughts dies from not adjusting from self-contridiction and counter-examples.
