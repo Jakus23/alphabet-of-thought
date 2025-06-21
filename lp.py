@@ -76,13 +76,18 @@ def p_element(p):
                | attribute_line
                | example_line
                | map_line
-               | code_line
-               | prefix_line'''
+               | code_line'''
     p[0] = p[1]
 
 def p_concept_line(p):
-    '''concept_line : CONCEPT opt_alias opt_newline'''
-    p[0] = ('concept', p[1], p[2])
+    '''concept_line : CONCEPT opt_alias opt_newline
+                   | CONCEPT ALIAS opt_newline'''
+    if len(p) == 4 and isinstance(p[2], str):
+        # CONCEPT ALIAS opt_newline (prefix style)
+        p[0] = ('concept', p[1], p[2])
+    else:
+        # CONCEPT opt_alias opt_newline
+        p[0] = ('concept', p[1], p[2])
 
 def p_attribute_line(p):
     '''attribute_line : ATTRIBUTE opt_alias DEFAULT opt_newline
@@ -103,10 +108,6 @@ def p_map_line(p):
 def p_code_line(p):
     '''code_line : CODE opt_newline'''
     p[0] = ('code', p[1])
-
-def p_prefix_line(p):
-    '''prefix_line : CONCEPT ALIAS opt_newline'''
-    p[0] = ('concept', p[1], p[2])
 
 def p_opt_alias(p):
     '''opt_alias : ALIAS
