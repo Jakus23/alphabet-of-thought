@@ -15,7 +15,7 @@ Data Types
             Postive small integers
             description: Whole numbers
     Date
-    Boolen
+    Boolean
         - True
         - False
     None

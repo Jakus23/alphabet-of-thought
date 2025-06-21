@@ -8,7 +8,7 @@ Token
                 - End Of Line
             predicate: Is A
             rule
-                - Parent Child
+                Parent Child
                     - May Have Many First Class Entities
                     - Indent For Child Of Parent
                     - Child Is A Parent
@@ -20,7 +20,7 @@ Token
                     - Inheritance
                         - Inherit Slots From Full Linage Of Parents
                         - Overload To Closest Inheritance
-                - Sibling
+                Sibling
                     - All Siblings Have The Same Granualarity
                     - Siblings May Have The Same Slot If Default Values Are Different
                     - New Lines 
@@ -113,7 +113,7 @@ Rule
             Has A
             Element
         object
-    Global Settings
+    Global Settings (Settings)
         background colour (colour): White
         file extension: aot
     Syntax Readibility Matters
@@ -179,7 +179,7 @@ Rule
                         Child One Link To Child Two
                             child one
                             child two
-                             
+
             - Data
                 Normal Forms
                 
@@ -188,8 +188,7 @@ Rule
             - Operational
         - The Sum Of All Child Frames Is The Parent
         - Frames Can Have Conceptual, Logical and Physical Children
-            - Only Define Where There Is A Return On Investmnet
-
+            - Only Define Where There Is A Return On Investment
     
 Function
     Create New Laugange
@@ -200,7 +199,7 @@ Function
             Type `yo code` Into Terminal
             Follow Prompts
                 what type of extension do you want to create: New Language Support
-                url or file to import, or none for new: ENTER
+                url or file to import or none for new: ENTER
                 extension name: alphabet of thought
                 extension identifier: aot
                 extension description: alphabet of thought
@@ -210,12 +209,12 @@ Function
                 scope name: source.aot
                 initialise git repository: Yes 
         Create `TextMate` Grammar
-            Update "oat.tmLanguage.json" file
-            Update "language-configuration.json" file
+            Update `oat.tmLanguage.json` File
+            Update `language-configuration.json` File
      
     Iterate Over Extension
         Make Change
-        Disable And Uninstall Previous "alphabet of thought" Extension
+        Disable And Uninstall Previous `alphabet of thought` Extension
         Create `vsix` File
             command: C:\Users\27837\OneDrive\alphabet-of-thought-main> vsce package
         Go To Extensions
