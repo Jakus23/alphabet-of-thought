@@ -8,19 +8,19 @@ Rule 2     elements -> element elements
 Rule 3     elements -> element
 Rule 4     elements -> NEWLINE elements
 Rule 5     elements -> NEWLINE
-Rule 6     element -> concept_line
-Rule 7     element -> attribute_line
-Rule 8     element -> example_line
-Rule 9     element -> map_line
-Rule 10    element -> code_line
-Rule 11    element -> prefix_line
-Rule 12    concept_line -> CONCEPT opt_alias opt_newline
-Rule 13    attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline
-Rule 14    attribute_line -> ATTRIBUTE opt_alias opt_newline
-Rule 15    example_line -> EXAMPLE opt_newline
-Rule 16    map_line -> MAP opt_newline
-Rule 17    code_line -> CODE opt_newline
-Rule 18    prefix_line -> CONCEPT ALIAS opt_newline
+Rule 6     element -> isa_line
+Rule 7     element -> concept_line
+Rule 8     element -> attribute_line
+Rule 9     element -> example_line
+Rule 10    element -> map_line
+Rule 11    element -> code_line
+Rule 12    isa_line -> ISA concept_line
+Rule 13    concept_line -> CONCEPT opt_alias opt_newline
+Rule 14    attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline
+Rule 15    attribute_line -> ATTRIBUTE opt_alias opt_newline
+Rule 16    example_line -> EXAMPLE opt_newline
+Rule 17    map_line -> MAP opt_newline
+Rule 18    code_line -> CODE opt_newline
 Rule 19    opt_alias -> ALIAS
 Rule 20    opt_alias -> empty
 Rule 21    opt_newline -> NEWLINE
@@ -29,30 +29,31 @@ Rule 23    empty -> <empty>
 
 Terminals, with rules where they appear
 
-ALIAS                : 18 19
-ATTRIBUTE            : 13 14
-CODE                 : 17
-CONCEPT              : 12 18
-DEFAULT              : 13
-EXAMPLE              : 15
-MAP                  : 16
+ALIAS                : 19
+ATTRIBUTE            : 14 15
+CODE                 : 18
+CONCEPT              : 13
+DEFAULT              : 14
+EXAMPLE              : 16
+ISA                  : 12
+MAP                  : 17
 NEWLINE              : 4 5 21
 error                : 
 
 Nonterminals, with rules where they appear
 
-attribute_line       : 7
-code_line            : 10
-concept_line         : 6
+attribute_line       : 8
+code_line            : 11
+concept_line         : 7 12
 document             : 0
 element              : 2 3
 elements             : 1 2 4
 empty                : 20 22
-example_line         : 8
-map_line             : 9
-opt_alias            : 12 13 14
-opt_newline          : 12 13 14 15 16 17 18
-prefix_line          : 11
+example_line         : 9
+isa_line             : 6
+map_line             : 10
+opt_alias            : 13 14 15
+opt_newline          : 13 14 15 16 17 18
 
 Parsing method: LALR
 
@@ -64,36 +65,37 @@ state 0
     (3) elements -> . element
     (4) elements -> . NEWLINE elements
     (5) elements -> . NEWLINE
-    (6) element -> . concept_line
-    (7) element -> . attribute_line
-    (8) element -> . example_line
-    (9) element -> . map_line
-    (10) element -> . code_line
-    (11) element -> . prefix_line
-    (12) concept_line -> . CONCEPT opt_alias opt_newline
-    (13) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
-    (14) attribute_line -> . ATTRIBUTE opt_alias opt_newline
-    (15) example_line -> . EXAMPLE opt_newline
-    (16) map_line -> . MAP opt_newline
-    (17) code_line -> . CODE opt_newline
-    (18) prefix_line -> . CONCEPT ALIAS opt_newline
+    (6) element -> . isa_line
+    (7) element -> . concept_line
+    (8) element -> . attribute_line
+    (9) element -> . example_line
+    (10) element -> . map_line
+    (11) element -> . code_line
+    (12) isa_line -> . ISA concept_line
+    (13) concept_line -> . CONCEPT opt_alias opt_newline
+    (14) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
+    (15) attribute_line -> . ATTRIBUTE opt_alias opt_newline
+    (16) example_line -> . EXAMPLE opt_newline
+    (17) map_line -> . MAP opt_newline
+    (18) code_line -> . CODE opt_newline
 
     NEWLINE         shift and go to state 4
-    CONCEPT         shift and go to state 11
-    ATTRIBUTE       shift and go to state 12
-    EXAMPLE         shift and go to state 13
-    MAP             shift and go to state 14
-    CODE            shift and go to state 15
+    ISA             shift and go to state 11
+    CONCEPT         shift and go to state 12
+    ATTRIBUTE       shift and go to state 13
+    EXAMPLE         shift and go to state 14
+    MAP             shift and go to state 15
+    CODE            shift and go to state 16
 
     document                       shift and go to state 1
     elements                       shift and go to state 2
     element                        shift and go to state 3
-    concept_line                   shift and go to state 5
-    attribute_line                 shift and go to state 6
-    example_line                   shift and go to state 7
-    map_line                       shift and go to state 8
-    code_line                      shift and go to state 9
-    prefix_line                    shift and go to state 10
+    isa_line                       shift and go to state 5
+    concept_line                   shift and go to state 6
+    attribute_line                 shift and go to state 7
+    example_line                   shift and go to state 8
+    map_line                       shift and go to state 9
+    code_line                      shift and go to state 10
 
 state 1
 
@@ -116,36 +118,37 @@ state 3
     (3) elements -> . element
     (4) elements -> . NEWLINE elements
     (5) elements -> . NEWLINE
-    (6) element -> . concept_line
-    (7) element -> . attribute_line
-    (8) element -> . example_line
-    (9) element -> . map_line
-    (10) element -> . code_line
-    (11) element -> . prefix_line
-    (12) concept_line -> . CONCEPT opt_alias opt_newline
-    (13) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
-    (14) attribute_line -> . ATTRIBUTE opt_alias opt_newline
-    (15) example_line -> . EXAMPLE opt_newline
-    (16) map_line -> . MAP opt_newline
-    (17) code_line -> . CODE opt_newline
-    (18) prefix_line -> . CONCEPT ALIAS opt_newline
+    (6) element -> . isa_line
+    (7) element -> . concept_line
+    (8) element -> . attribute_line
+    (9) element -> . example_line
+    (10) element -> . map_line
+    (11) element -> . code_line
+    (12) isa_line -> . ISA concept_line
+    (13) concept_line -> . CONCEPT opt_alias opt_newline
+    (14) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
+    (15) attribute_line -> . ATTRIBUTE opt_alias opt_newline
+    (16) example_line -> . EXAMPLE opt_newline
+    (17) map_line -> . MAP opt_newline
+    (18) code_line -> . CODE opt_newline
 
     $end            reduce using rule 3 (elements -> element .)
     NEWLINE         shift and go to state 4
-    CONCEPT         shift and go to state 11
-    ATTRIBUTE       shift and go to state 12
-    EXAMPLE         shift and go to state 13
-    MAP             shift and go to state 14
-    CODE            shift and go to state 15
+    ISA             shift and go to state 11
+    CONCEPT         shift and go to state 12
+    ATTRIBUTE       shift and go to state 13
+    EXAMPLE         shift and go to state 14
+    MAP             shift and go to state 15
+    CODE            shift and go to state 16
 
     element                        shift and go to state 3
-    elements                       shift and go to state 16
-    concept_line                   shift and go to state 5
-    attribute_line                 shift and go to state 6
-    example_line                   shift and go to state 7
-    map_line                       shift and go to state 8
-    code_line                      shift and go to state 9
-    prefix_line                    shift and go to state 10
+    elements                       shift and go to state 17
+    isa_line                       shift and go to state 5
+    concept_line                   shift and go to state 6
+    attribute_line                 shift and go to state 7
+    example_line                   shift and go to state 8
+    map_line                       shift and go to state 9
+    code_line                      shift and go to state 10
 
 state 4
 
@@ -155,146 +158,141 @@ state 4
     (3) elements -> . element
     (4) elements -> . NEWLINE elements
     (5) elements -> . NEWLINE
-    (6) element -> . concept_line
-    (7) element -> . attribute_line
-    (8) element -> . example_line
-    (9) element -> . map_line
-    (10) element -> . code_line
-    (11) element -> . prefix_line
-    (12) concept_line -> . CONCEPT opt_alias opt_newline
-    (13) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
-    (14) attribute_line -> . ATTRIBUTE opt_alias opt_newline
-    (15) example_line -> . EXAMPLE opt_newline
-    (16) map_line -> . MAP opt_newline
-    (17) code_line -> . CODE opt_newline
-    (18) prefix_line -> . CONCEPT ALIAS opt_newline
+    (6) element -> . isa_line
+    (7) element -> . concept_line
+    (8) element -> . attribute_line
+    (9) element -> . example_line
+    (10) element -> . map_line
+    (11) element -> . code_line
+    (12) isa_line -> . ISA concept_line
+    (13) concept_line -> . CONCEPT opt_alias opt_newline
+    (14) attribute_line -> . ATTRIBUTE opt_alias DEFAULT opt_newline
+    (15) attribute_line -> . ATTRIBUTE opt_alias opt_newline
+    (16) example_line -> . EXAMPLE opt_newline
+    (17) map_line -> . MAP opt_newline
+    (18) code_line -> . CODE opt_newline
 
     $end            reduce using rule 5 (elements -> NEWLINE .)
     NEWLINE         shift and go to state 4
-    CONCEPT         shift and go to state 11
-    ATTRIBUTE       shift and go to state 12
-    EXAMPLE         shift and go to state 13
-    MAP             shift and go to state 14
-    CODE            shift and go to state 15
+    ISA             shift and go to state 11
+    CONCEPT         shift and go to state 12
+    ATTRIBUTE       shift and go to state 13
+    EXAMPLE         shift and go to state 14
+    MAP             shift and go to state 15
+    CODE            shift and go to state 16
 
-    elements                       shift and go to state 17
+    elements                       shift and go to state 18
     element                        shift and go to state 3
-    concept_line                   shift and go to state 5
-    attribute_line                 shift and go to state 6
-    example_line                   shift and go to state 7
-    map_line                       shift and go to state 8
-    code_line                      shift and go to state 9
-    prefix_line                    shift and go to state 10
+    isa_line                       shift and go to state 5
+    concept_line                   shift and go to state 6
+    attribute_line                 shift and go to state 7
+    example_line                   shift and go to state 8
+    map_line                       shift and go to state 9
+    code_line                      shift and go to state 10
 
 state 5
 
-    (6) element -> concept_line .
+    (6) element -> isa_line .
 
-    NEWLINE         reduce using rule 6 (element -> concept_line .)
-    CONCEPT         reduce using rule 6 (element -> concept_line .)
-    ATTRIBUTE       reduce using rule 6 (element -> concept_line .)
-    EXAMPLE         reduce using rule 6 (element -> concept_line .)
-    MAP             reduce using rule 6 (element -> concept_line .)
-    CODE            reduce using rule 6 (element -> concept_line .)
-    $end            reduce using rule 6 (element -> concept_line .)
+    NEWLINE         reduce using rule 6 (element -> isa_line .)
+    ISA             reduce using rule 6 (element -> isa_line .)
+    CONCEPT         reduce using rule 6 (element -> isa_line .)
+    ATTRIBUTE       reduce using rule 6 (element -> isa_line .)
+    EXAMPLE         reduce using rule 6 (element -> isa_line .)
+    MAP             reduce using rule 6 (element -> isa_line .)
+    CODE            reduce using rule 6 (element -> isa_line .)
+    $end            reduce using rule 6 (element -> isa_line .)
 
 
 state 6
 
-    (7) element -> attribute_line .
+    (7) element -> concept_line .
 
-    NEWLINE         reduce using rule 7 (element -> attribute_line .)
-    CONCEPT         reduce using rule 7 (element -> attribute_line .)
-    ATTRIBUTE       reduce using rule 7 (element -> attribute_line .)
-    EXAMPLE         reduce using rule 7 (element -> attribute_line .)
-    MAP             reduce using rule 7 (element -> attribute_line .)
-    CODE            reduce using rule 7 (element -> attribute_line .)
-    $end            reduce using rule 7 (element -> attribute_line .)
+    NEWLINE         reduce using rule 7 (element -> concept_line .)
+    ISA             reduce using rule 7 (element -> concept_line .)
+    CONCEPT         reduce using rule 7 (element -> concept_line .)
+    ATTRIBUTE       reduce using rule 7 (element -> concept_line .)
+    EXAMPLE         reduce using rule 7 (element -> concept_line .)
+    MAP             reduce using rule 7 (element -> concept_line .)
+    CODE            reduce using rule 7 (element -> concept_line .)
+    $end            reduce using rule 7 (element -> concept_line .)
 
 
 state 7
 
-    (8) element -> example_line .
+    (8) element -> attribute_line .
 
-    NEWLINE         reduce using rule 8 (element -> example_line .)
-    CONCEPT         reduce using rule 8 (element -> example_line .)
-    ATTRIBUTE       reduce using rule 8 (element -> example_line .)
-    EXAMPLE         reduce using rule 8 (element -> example_line .)
-    MAP             reduce using rule 8 (element -> example_line .)
-    CODE            reduce using rule 8 (element -> example_line .)
-    $end            reduce using rule 8 (element -> example_line .)
+    NEWLINE         reduce using rule 8 (element -> attribute_line .)
+    ISA             reduce using rule 8 (element -> attribute_line .)
+    CONCEPT         reduce using rule 8 (element -> attribute_line .)
+    ATTRIBUTE       reduce using rule 8 (element -> attribute_line .)
+    EXAMPLE         reduce using rule 8 (element -> attribute_line .)
+    MAP             reduce using rule 8 (element -> attribute_line .)
+    CODE            reduce using rule 8 (element -> attribute_line .)
+    $end            reduce using rule 8 (element -> attribute_line .)
 
 
 state 8
 
-    (9) element -> map_line .
+    (9) element -> example_line .
 
-    NEWLINE         reduce using rule 9 (element -> map_line .)
-    CONCEPT         reduce using rule 9 (element -> map_line .)
-    ATTRIBUTE       reduce using rule 9 (element -> map_line .)
-    EXAMPLE         reduce using rule 9 (element -> map_line .)
-    MAP             reduce using rule 9 (element -> map_line .)
-    CODE            reduce using rule 9 (element -> map_line .)
-    $end            reduce using rule 9 (element -> map_line .)
+    NEWLINE         reduce using rule 9 (element -> example_line .)
+    ISA             reduce using rule 9 (element -> example_line .)
+    CONCEPT         reduce using rule 9 (element -> example_line .)
+    ATTRIBUTE       reduce using rule 9 (element -> example_line .)
+    EXAMPLE         reduce using rule 9 (element -> example_line .)
+    MAP             reduce using rule 9 (element -> example_line .)
+    CODE            reduce using rule 9 (element -> example_line .)
+    $end            reduce using rule 9 (element -> example_line .)
 
 
 state 9
 
-    (10) element -> code_line .
+    (10) element -> map_line .
 
-    NEWLINE         reduce using rule 10 (element -> code_line .)
-    CONCEPT         reduce using rule 10 (element -> code_line .)
-    ATTRIBUTE       reduce using rule 10 (element -> code_line .)
-    EXAMPLE         reduce using rule 10 (element -> code_line .)
-    MAP             reduce using rule 10 (element -> code_line .)
-    CODE            reduce using rule 10 (element -> code_line .)
-    $end            reduce using rule 10 (element -> code_line .)
+    NEWLINE         reduce using rule 10 (element -> map_line .)
+    ISA             reduce using rule 10 (element -> map_line .)
+    CONCEPT         reduce using rule 10 (element -> map_line .)
+    ATTRIBUTE       reduce using rule 10 (element -> map_line .)
+    EXAMPLE         reduce using rule 10 (element -> map_line .)
+    MAP             reduce using rule 10 (element -> map_line .)
+    CODE            reduce using rule 10 (element -> map_line .)
+    $end            reduce using rule 10 (element -> map_line .)
 
 
 state 10
 
-    (11) element -> prefix_line .
+    (11) element -> code_line .
 
-    NEWLINE         reduce using rule 11 (element -> prefix_line .)
-    CONCEPT         reduce using rule 11 (element -> prefix_line .)
-    ATTRIBUTE       reduce using rule 11 (element -> prefix_line .)
-    EXAMPLE         reduce using rule 11 (element -> prefix_line .)
-    MAP             reduce using rule 11 (element -> prefix_line .)
-    CODE            reduce using rule 11 (element -> prefix_line .)
-    $end            reduce using rule 11 (element -> prefix_line .)
+    NEWLINE         reduce using rule 11 (element -> code_line .)
+    ISA             reduce using rule 11 (element -> code_line .)
+    CONCEPT         reduce using rule 11 (element -> code_line .)
+    ATTRIBUTE       reduce using rule 11 (element -> code_line .)
+    EXAMPLE         reduce using rule 11 (element -> code_line .)
+    MAP             reduce using rule 11 (element -> code_line .)
+    CODE            reduce using rule 11 (element -> code_line .)
+    $end            reduce using rule 11 (element -> code_line .)
 
 
 state 11
 
-    (12) concept_line -> CONCEPT . opt_alias opt_newline
-    (18) prefix_line -> CONCEPT . ALIAS opt_newline
-    (19) opt_alias -> . ALIAS
-    (20) opt_alias -> . empty
-    (23) empty -> .
+    (12) isa_line -> ISA . concept_line
+    (13) concept_line -> . CONCEPT opt_alias opt_newline
 
-    ALIAS           shift and go to state 19
-    NEWLINE         reduce using rule 23 (empty -> .)
-    CONCEPT         reduce using rule 23 (empty -> .)
-    ATTRIBUTE       reduce using rule 23 (empty -> .)
-    EXAMPLE         reduce using rule 23 (empty -> .)
-    MAP             reduce using rule 23 (empty -> .)
-    CODE            reduce using rule 23 (empty -> .)
-    $end            reduce using rule 23 (empty -> .)
+    CONCEPT         shift and go to state 12
 
-    opt_alias                      shift and go to state 18
-    empty                          shift and go to state 20
+    concept_line                   shift and go to state 19
 
 state 12
 
-    (13) attribute_line -> ATTRIBUTE . opt_alias DEFAULT opt_newline
-    (14) attribute_line -> ATTRIBUTE . opt_alias opt_newline
+    (13) concept_line -> CONCEPT . opt_alias opt_newline
     (19) opt_alias -> . ALIAS
     (20) opt_alias -> . empty
     (23) empty -> .
 
-    ALIAS           shift and go to state 22
-    DEFAULT         reduce using rule 23 (empty -> .)
+    ALIAS           shift and go to state 21
     NEWLINE         reduce using rule 23 (empty -> .)
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -302,18 +300,21 @@ state 12
     CODE            reduce using rule 23 (empty -> .)
     $end            reduce using rule 23 (empty -> .)
 
-    opt_alias                      shift and go to state 21
-    empty                          shift and go to state 20
+    opt_alias                      shift and go to state 20
+    empty                          shift and go to state 22
 
 state 13
 
-    (15) example_line -> EXAMPLE . opt_newline
-    (21) opt_newline -> . NEWLINE
-    (22) opt_newline -> . empty
+    (14) attribute_line -> ATTRIBUTE . opt_alias DEFAULT opt_newline
+    (15) attribute_line -> ATTRIBUTE . opt_alias opt_newline
+    (19) opt_alias -> . ALIAS
+    (20) opt_alias -> . empty
     (23) empty -> .
 
-  ! shift/reduce conflict for NEWLINE resolved as shift
-    NEWLINE         shift and go to state 24
+    ALIAS           shift and go to state 21
+    DEFAULT         reduce using rule 23 (empty -> .)
+    NEWLINE         reduce using rule 23 (empty -> .)
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -321,20 +322,19 @@ state 13
     CODE            reduce using rule 23 (empty -> .)
     $end            reduce using rule 23 (empty -> .)
 
-  ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
-
-    opt_newline                    shift and go to state 23
-    empty                          shift and go to state 25
+    opt_alias                      shift and go to state 23
+    empty                          shift and go to state 22
 
 state 14
 
-    (16) map_line -> MAP . opt_newline
+    (16) example_line -> EXAMPLE . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
-    NEWLINE         shift and go to state 24
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -344,18 +344,19 @@ state 14
 
   ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
 
-    opt_newline                    shift and go to state 26
-    empty                          shift and go to state 25
+    opt_newline                    shift and go to state 24
+    empty                          shift and go to state 26
 
 state 15
 
-    (17) code_line -> CODE . opt_newline
+    (17) map_line -> MAP . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
-    NEWLINE         shift and go to state 24
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -366,31 +367,18 @@ state 15
   ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
 
     opt_newline                    shift and go to state 27
-    empty                          shift and go to state 25
+    empty                          shift and go to state 26
 
 state 16
 
-    (2) elements -> element elements .
-
-    $end            reduce using rule 2 (elements -> element elements .)
-
-
-state 17
-
-    (4) elements -> NEWLINE elements .
-
-    $end            reduce using rule 4 (elements -> NEWLINE elements .)
-
-
-state 18
-
-    (12) concept_line -> CONCEPT opt_alias . opt_newline
+    (18) code_line -> CODE . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
-    NEWLINE         shift and go to state 24
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -401,49 +389,79 @@ state 18
   ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
 
     opt_newline                    shift and go to state 28
-    empty                          shift and go to state 25
+    empty                          shift and go to state 26
+
+state 17
+
+    (2) elements -> element elements .
+
+    $end            reduce using rule 2 (elements -> element elements .)
+
+
+state 18
+
+    (4) elements -> NEWLINE elements .
+
+    $end            reduce using rule 4 (elements -> NEWLINE elements .)
+
 
 state 19
 
-    (18) prefix_line -> CONCEPT ALIAS . opt_newline
-    (19) opt_alias -> ALIAS .
+    (12) isa_line -> ISA concept_line .
+
+    NEWLINE         reduce using rule 12 (isa_line -> ISA concept_line .)
+    ISA             reduce using rule 12 (isa_line -> ISA concept_line .)
+    CONCEPT         reduce using rule 12 (isa_line -> ISA concept_line .)
+    ATTRIBUTE       reduce using rule 12 (isa_line -> ISA concept_line .)
+    EXAMPLE         reduce using rule 12 (isa_line -> ISA concept_line .)
+    MAP             reduce using rule 12 (isa_line -> ISA concept_line .)
+    CODE            reduce using rule 12 (isa_line -> ISA concept_line .)
+    $end            reduce using rule 12 (isa_line -> ISA concept_line .)
+
+
+state 20
+
+    (13) concept_line -> CONCEPT opt_alias . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
-  ! shift/reduce conflict for NEWLINE resolved as shift
-  ! reduce/reduce conflict for CONCEPT resolved using rule 19 (opt_alias -> ALIAS .)
-  ! reduce/reduce conflict for ATTRIBUTE resolved using rule 19 (opt_alias -> ALIAS .)
-  ! reduce/reduce conflict for EXAMPLE resolved using rule 19 (opt_alias -> ALIAS .)
-  ! reduce/reduce conflict for MAP resolved using rule 19 (opt_alias -> ALIAS .)
-  ! reduce/reduce conflict for CODE resolved using rule 19 (opt_alias -> ALIAS .)
-  ! reduce/reduce conflict for $end resolved using rule 19 (opt_alias -> ALIAS .)
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
+    CONCEPT         reduce using rule 23 (empty -> .)
+    ATTRIBUTE       reduce using rule 23 (empty -> .)
+    EXAMPLE         reduce using rule 23 (empty -> .)
+    MAP             reduce using rule 23 (empty -> .)
+    CODE            reduce using rule 23 (empty -> .)
+    $end            reduce using rule 23 (empty -> .)
+
+  ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
+
+    opt_newline                    shift and go to state 29
+    empty                          shift and go to state 26
+
+state 21
+
+    (19) opt_alias -> ALIAS .
+
+    NEWLINE         reduce using rule 19 (opt_alias -> ALIAS .)
+    ISA             reduce using rule 19 (opt_alias -> ALIAS .)
     CONCEPT         reduce using rule 19 (opt_alias -> ALIAS .)
     ATTRIBUTE       reduce using rule 19 (opt_alias -> ALIAS .)
     EXAMPLE         reduce using rule 19 (opt_alias -> ALIAS .)
     MAP             reduce using rule 19 (opt_alias -> ALIAS .)
     CODE            reduce using rule 19 (opt_alias -> ALIAS .)
     $end            reduce using rule 19 (opt_alias -> ALIAS .)
-    NEWLINE         shift and go to state 24
+    DEFAULT         reduce using rule 19 (opt_alias -> ALIAS .)
 
-  ! NEWLINE         [ reduce using rule 19 (opt_alias -> ALIAS .) ]
-  ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
-  ! CONCEPT         [ reduce using rule 23 (empty -> .) ]
-  ! ATTRIBUTE       [ reduce using rule 23 (empty -> .) ]
-  ! EXAMPLE         [ reduce using rule 23 (empty -> .) ]
-  ! MAP             [ reduce using rule 23 (empty -> .) ]
-  ! CODE            [ reduce using rule 23 (empty -> .) ]
-  ! $end            [ reduce using rule 23 (empty -> .) ]
 
-    opt_newline                    shift and go to state 29
-    empty                          shift and go to state 25
-
-state 20
+state 22
 
     (20) opt_alias -> empty .
 
     NEWLINE         reduce using rule 20 (opt_alias -> empty .)
+    ISA             reduce using rule 20 (opt_alias -> empty .)
     CONCEPT         reduce using rule 20 (opt_alias -> empty .)
     ATTRIBUTE       reduce using rule 20 (opt_alias -> empty .)
     EXAMPLE         reduce using rule 20 (opt_alias -> empty .)
@@ -453,17 +471,18 @@ state 20
     DEFAULT         reduce using rule 20 (opt_alias -> empty .)
 
 
-state 21
+state 23
 
-    (13) attribute_line -> ATTRIBUTE opt_alias . DEFAULT opt_newline
-    (14) attribute_line -> ATTRIBUTE opt_alias . opt_newline
+    (14) attribute_line -> ATTRIBUTE opt_alias . DEFAULT opt_newline
+    (15) attribute_line -> ATTRIBUTE opt_alias . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
     DEFAULT         shift and go to state 30
-    NEWLINE         shift and go to state 24
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -474,40 +493,28 @@ state 21
   ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
 
     opt_newline                    shift and go to state 31
-    empty                          shift and go to state 25
-
-state 22
-
-    (19) opt_alias -> ALIAS .
-
-    DEFAULT         reduce using rule 19 (opt_alias -> ALIAS .)
-    NEWLINE         reduce using rule 19 (opt_alias -> ALIAS .)
-    CONCEPT         reduce using rule 19 (opt_alias -> ALIAS .)
-    ATTRIBUTE       reduce using rule 19 (opt_alias -> ALIAS .)
-    EXAMPLE         reduce using rule 19 (opt_alias -> ALIAS .)
-    MAP             reduce using rule 19 (opt_alias -> ALIAS .)
-    CODE            reduce using rule 19 (opt_alias -> ALIAS .)
-    $end            reduce using rule 19 (opt_alias -> ALIAS .)
-
-
-state 23
-
-    (15) example_line -> EXAMPLE opt_newline .
-
-    NEWLINE         reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    CONCEPT         reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    ATTRIBUTE       reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    EXAMPLE         reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    MAP             reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    CODE            reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-    $end            reduce using rule 15 (example_line -> EXAMPLE opt_newline .)
-
+    empty                          shift and go to state 26
 
 state 24
+
+    (16) example_line -> EXAMPLE opt_newline .
+
+    NEWLINE         reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    ISA             reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    CONCEPT         reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    ATTRIBUTE       reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    EXAMPLE         reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    MAP             reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    CODE            reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+    $end            reduce using rule 16 (example_line -> EXAMPLE opt_newline .)
+
+
+state 25
 
     (21) opt_newline -> NEWLINE .
 
     NEWLINE         reduce using rule 21 (opt_newline -> NEWLINE .)
+    ISA             reduce using rule 21 (opt_newline -> NEWLINE .)
     CONCEPT         reduce using rule 21 (opt_newline -> NEWLINE .)
     ATTRIBUTE       reduce using rule 21 (opt_newline -> NEWLINE .)
     EXAMPLE         reduce using rule 21 (opt_newline -> NEWLINE .)
@@ -516,11 +523,12 @@ state 24
     $end            reduce using rule 21 (opt_newline -> NEWLINE .)
 
 
-state 25
+state 26
 
     (22) opt_newline -> empty .
 
     NEWLINE         reduce using rule 22 (opt_newline -> empty .)
+    ISA             reduce using rule 22 (opt_newline -> empty .)
     CONCEPT         reduce using rule 22 (opt_newline -> empty .)
     ATTRIBUTE       reduce using rule 22 (opt_newline -> empty .)
     EXAMPLE         reduce using rule 22 (opt_newline -> empty .)
@@ -529,67 +537,58 @@ state 25
     $end            reduce using rule 22 (opt_newline -> empty .)
 
 
-state 26
-
-    (16) map_line -> MAP opt_newline .
-
-    NEWLINE         reduce using rule 16 (map_line -> MAP opt_newline .)
-    CONCEPT         reduce using rule 16 (map_line -> MAP opt_newline .)
-    ATTRIBUTE       reduce using rule 16 (map_line -> MAP opt_newline .)
-    EXAMPLE         reduce using rule 16 (map_line -> MAP opt_newline .)
-    MAP             reduce using rule 16 (map_line -> MAP opt_newline .)
-    CODE            reduce using rule 16 (map_line -> MAP opt_newline .)
-    $end            reduce using rule 16 (map_line -> MAP opt_newline .)
-
-
 state 27
 
-    (17) code_line -> CODE opt_newline .
+    (17) map_line -> MAP opt_newline .
 
-    NEWLINE         reduce using rule 17 (code_line -> CODE opt_newline .)
-    CONCEPT         reduce using rule 17 (code_line -> CODE opt_newline .)
-    ATTRIBUTE       reduce using rule 17 (code_line -> CODE opt_newline .)
-    EXAMPLE         reduce using rule 17 (code_line -> CODE opt_newline .)
-    MAP             reduce using rule 17 (code_line -> CODE opt_newline .)
-    CODE            reduce using rule 17 (code_line -> CODE opt_newline .)
-    $end            reduce using rule 17 (code_line -> CODE opt_newline .)
+    NEWLINE         reduce using rule 17 (map_line -> MAP opt_newline .)
+    ISA             reduce using rule 17 (map_line -> MAP opt_newline .)
+    CONCEPT         reduce using rule 17 (map_line -> MAP opt_newline .)
+    ATTRIBUTE       reduce using rule 17 (map_line -> MAP opt_newline .)
+    EXAMPLE         reduce using rule 17 (map_line -> MAP opt_newline .)
+    MAP             reduce using rule 17 (map_line -> MAP opt_newline .)
+    CODE            reduce using rule 17 (map_line -> MAP opt_newline .)
+    $end            reduce using rule 17 (map_line -> MAP opt_newline .)
 
 
 state 28
 
-    (12) concept_line -> CONCEPT opt_alias opt_newline .
+    (18) code_line -> CODE opt_newline .
 
-    NEWLINE         reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    CONCEPT         reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    ATTRIBUTE       reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    EXAMPLE         reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    MAP             reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    CODE            reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
-    $end            reduce using rule 12 (concept_line -> CONCEPT opt_alias opt_newline .)
+    NEWLINE         reduce using rule 18 (code_line -> CODE opt_newline .)
+    ISA             reduce using rule 18 (code_line -> CODE opt_newline .)
+    CONCEPT         reduce using rule 18 (code_line -> CODE opt_newline .)
+    ATTRIBUTE       reduce using rule 18 (code_line -> CODE opt_newline .)
+    EXAMPLE         reduce using rule 18 (code_line -> CODE opt_newline .)
+    MAP             reduce using rule 18 (code_line -> CODE opt_newline .)
+    CODE            reduce using rule 18 (code_line -> CODE opt_newline .)
+    $end            reduce using rule 18 (code_line -> CODE opt_newline .)
 
 
 state 29
 
-    (18) prefix_line -> CONCEPT ALIAS opt_newline .
+    (13) concept_line -> CONCEPT opt_alias opt_newline .
 
-    NEWLINE         reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    CONCEPT         reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    ATTRIBUTE       reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    EXAMPLE         reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    MAP             reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    CODE            reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
-    $end            reduce using rule 18 (prefix_line -> CONCEPT ALIAS opt_newline .)
+    NEWLINE         reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    ISA             reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    CONCEPT         reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    ATTRIBUTE       reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    EXAMPLE         reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    MAP             reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    CODE            reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
+    $end            reduce using rule 13 (concept_line -> CONCEPT opt_alias opt_newline .)
 
 
 state 30
 
-    (13) attribute_line -> ATTRIBUTE opt_alias DEFAULT . opt_newline
+    (14) attribute_line -> ATTRIBUTE opt_alias DEFAULT . opt_newline
     (21) opt_newline -> . NEWLINE
     (22) opt_newline -> . empty
     (23) empty -> .
 
   ! shift/reduce conflict for NEWLINE resolved as shift
-    NEWLINE         shift and go to state 24
+    NEWLINE         shift and go to state 25
+    ISA             reduce using rule 23 (empty -> .)
     CONCEPT         reduce using rule 23 (empty -> .)
     ATTRIBUTE       reduce using rule 23 (empty -> .)
     EXAMPLE         reduce using rule 23 (empty -> .)
@@ -600,43 +599,41 @@ state 30
   ! NEWLINE         [ reduce using rule 23 (empty -> .) ]
 
     opt_newline                    shift and go to state 32
-    empty                          shift and go to state 25
+    empty                          shift and go to state 26
 
 state 31
 
-    (14) attribute_line -> ATTRIBUTE opt_alias opt_newline .
+    (15) attribute_line -> ATTRIBUTE opt_alias opt_newline .
 
-    NEWLINE         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    CONCEPT         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    ATTRIBUTE       reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    EXAMPLE         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    MAP             reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    CODE            reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
-    $end            reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    NEWLINE         reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    ISA             reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    CONCEPT         reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    ATTRIBUTE       reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    EXAMPLE         reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    MAP             reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    CODE            reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
+    $end            reduce using rule 15 (attribute_line -> ATTRIBUTE opt_alias opt_newline .)
 
 
 state 32
 
-    (13) attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .
+    (14) attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .
 
-    NEWLINE         reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    CONCEPT         reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    ATTRIBUTE       reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    EXAMPLE         reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    MAP             reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    CODE            reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
-    $end            reduce using rule 13 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    NEWLINE         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    ISA             reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    CONCEPT         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    ATTRIBUTE       reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    EXAMPLE         reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    MAP             reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    CODE            reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
+    $end            reduce using rule 14 (attribute_line -> ATTRIBUTE opt_alias DEFAULT opt_newline .)
 
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-WARNING: shift/reduce conflict for NEWLINE in state 13 resolved as shift
 WARNING: shift/reduce conflict for NEWLINE in state 14 resolved as shift
 WARNING: shift/reduce conflict for NEWLINE in state 15 resolved as shift
-WARNING: shift/reduce conflict for NEWLINE in state 18 resolved as shift
-WARNING: shift/reduce conflict for NEWLINE in state 19 resolved as shift
-WARNING: shift/reduce conflict for NEWLINE in state 19 resolved as shift
-WARNING: shift/reduce conflict for NEWLINE in state 21 resolved as shift
+WARNING: shift/reduce conflict for NEWLINE in state 16 resolved as shift
+WARNING: shift/reduce conflict for NEWLINE in state 20 resolved as shift
+WARNING: shift/reduce conflict for NEWLINE in state 23 resolved as shift
 WARNING: shift/reduce conflict for NEWLINE in state 30 resolved as shift
-WARNING: reduce/reduce conflict in state 19 resolved using rule (opt_alias -> ALIAS)
-WARNING: rejected rule (empty -> <empty>) in state 19

@@ -11,10 +11,14 @@ tokens = (
 )
 
 # Token regex
-t_CONCEPT = r'[A-Z][A-Za-z0-9 ]*'
-t_ATTRIBUTE = r'[a-z][a-z0-9 ]*'
-t_ALIAS = r'\([^)]+\)'
+t_CONCEPT = r'[^a-z\s][^\n(]*'
+t_ATTRIBUTE = r'[a-z][^(:\n]*'
 t_ignore = ' \t'
+
+def t_ALIAS(t):
+    r'\([^)]+\)'
+    t.value = t.value[1:-1].strip()  # Remove the ( and ) and strip whitespace
+    return t
 
 def t_CODE(t):
     r'```[\s\S]*?```'
@@ -80,14 +84,8 @@ def p_element(p):
     p[0] = p[1]
 
 def p_concept_line(p):
-    '''concept_line : CONCEPT opt_alias opt_newline
-                   | CONCEPT ALIAS opt_newline'''
-    if len(p) == 4 and isinstance(p[2], str):
-        # CONCEPT ALIAS opt_newline (prefix style)
-        p[0] = ('concept', p[1], p[2])
-    else:
-        # CONCEPT opt_alias opt_newline
-        p[0] = ('concept', p[1], p[2])
+    'concept_line : CONCEPT opt_alias opt_newline'
+    p[0] = ('concept', p[1], p[2])
 
 def p_attribute_line(p):
     '''attribute_line : ATTRIBUTE opt_alias DEFAULT opt_newline

@@ -29,7 +29,7 @@ Alpha has *ideas* and *connections* between ideas to build clear thought. Here's
 
 *content (data)*
 
-5. Attribute Defaults – Expected values (e.g. `age: 42`)
+5. Attribute with Defaults – Expected values (e.g. `age: 42`)
 6. Examples (e.g. `- Mark Zuckerberg`)
 7. Code – Inline snippets (e.g. `for person in persons:`)
 
@@ -68,6 +68,7 @@ Alpha has *ideas* and *connections* between ideas to build clear thought. Here's
     Years
     age years: 5
 ```
+
 ## Example: From RDF/Turtle to Alpha
 
 Here’s the same information written in both  [Turtle (syntax)](https://en.wikipedia.org/wiki/Turtle_(syntax)) and Alpha.
