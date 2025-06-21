@@ -45,5 +45,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Jakus23/alphabet-of-thought.git"
-  }
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:aot"
+  ]
 }
